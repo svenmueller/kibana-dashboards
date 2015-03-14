@@ -4,17 +4,57 @@
     "query": {
       "list": {
         "0": {
-          "query": "",
-          "alias": "",
+          "query": "http_status:[200 TO 299]",
+          "alias": "2xx",
           "color": "#7EB26D",
           "id": 0,
-          "pin": false,
+          "pin": true,
           "type": "lucene",
           "enable": true
+        },
+        "1": {
+          "id": 1,
+          "color": "#EAB839",
+          "alias": "3xx",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "http_status:[300 TO 399]"
+        },
+        "2": {
+          "id": 2,
+          "color": "#E0752D",
+          "alias": "4xx",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "http_status:[400 TO 499]"
+        },
+        "3": {
+          "id": 3,
+          "color": "#BF1B00",
+          "alias": "5xx",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "http_status:[500 TO 599]"
+        },
+        "4": {
+          "id": 4,
+          "color": "#E24D42",
+          "alias": "",
+          "pin": false,
+          "type": "lucene",
+          "enable": true,
+          "query": "*"
         }
       },
       "ids": [
-        0
+        0,
+        1,
+        2,
+        3,
+        4
       ]
     },
     "filter": {
@@ -83,7 +123,10 @@
           "queries": {
             "mode": "all",
             "ids": [
-              0
+              0,
+              1,
+              2,
+              3
             ]
           },
           "title": "Events over time",
@@ -104,7 +147,7 @@
           ],
           "options": true,
           "tooltip": {
-            "value_type": "cumulative",
+            "value_type": "individual",
             "query_as_alias": true
           },
           "scale": 1,
@@ -148,7 +191,10 @@
           "queries": {
             "mode": "all",
             "ids": [
-              0
+              0,
+              1,
+              2,
+              3
             ]
           },
           "annotate": {
@@ -222,7 +268,10 @@
           "queries": {
             "mode": "all",
             "ids": [
-              0
+              0,
+              1,
+              2,
+              3
             ]
           },
           "annotate": {
@@ -301,7 +350,10 @@
           "queries": {
             "mode": "all",
             "ids": [
-              0
+              0,
+              1,
+              2,
+              3
             ]
           },
           "tmode": "terms",
@@ -344,7 +396,10 @@
           "queries": {
             "mode": "all",
             "ids": [
-              0
+              0,
+              1,
+              2,
+              3
             ]
           },
           "tmode": "terms",
@@ -377,7 +432,10 @@
           "queries": {
             "mode": "all",
             "ids": [
-              0
+              0,
+              1,
+              2,
+              3
             ]
           },
           "tmode": "terms",
@@ -412,7 +470,10 @@
           "queries": {
             "mode": "all",
             "ids": [
-              0
+              0,
+              1,
+              2,
+              3
             ]
           },
           "tmode": "terms",
@@ -445,7 +506,10 @@
           "queries": {
             "mode": "all",
             "ids": [
-              0
+              0,
+              1,
+              2,
+              3
             ]
           },
           "tmode": "terms",
@@ -475,15 +539,14 @@
       "query": "*",
       "pinned": true,
       "history": [
+        "http_status:[500 TO 599]",
+        "http_status:[400 TO 499]",
+        "http_status:[300 TO 399]",
+        "http_status:[200 TO 299]",
         "",
         "type:nginx-access",
         "mozilla",
-        "\"Mozilla/5.0\"",
-        "http_status:[400 TO 499]",
-        "http_status:[500 TO 599]",
-        "http_status:[300 TO 399]",
-        "http_status:[200 TO 299]",
-        "http_status:[200 TO 299]"
+        "\"Mozilla/5.0\""
       ],
       "remember": 10,
       "enable": true
