@@ -1,2 +1,2 @@
 # kibana-dashboards
-Collections of useful kabana dashboards
+Collections of useful kibana dashboards
