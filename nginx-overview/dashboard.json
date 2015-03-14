@@ -349,7 +349,7 @@
           "tmode": "terms",
           "tstat": "total",
           "valuefield": "",
-          "title": "HTTP Response"
+          "title": "Status"
         },
         {
           "error": false,
@@ -385,7 +385,7 @@
           "tmode": "terms",
           "tstat": "total",
           "valuefield": "",
-          "title": "HTTP Method"
+          "title": "Method"
         },
         {
           "error": false,
@@ -393,7 +393,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "host",
+          "field": "host.raw",
           "exclude": [],
           "missing": true,
           "other": true,
@@ -439,7 +439,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "http_remote",
+          "field": "http_remote.raw",
           "exclude": [],
           "missing": true,
           "other": true,
@@ -475,7 +475,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "http_config",
+          "field": "http_config.raw",
           "exclude": [],
           "missing": true,
           "other": true,
@@ -511,7 +511,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "http_useragent",
+          "field": "http_useragent.raw",
           "exclude": [
             "Other"
           ],
@@ -549,7 +549,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "http_uri",
+          "field": "http_uri.raw",
           "exclude": [],
           "missing": true,
           "other": true,
