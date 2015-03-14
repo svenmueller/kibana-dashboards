@@ -38,23 +38,13 @@
           "type": "lucene",
           "enable": true,
           "query": "http_status:[500 TO 599]"
-        },
-        "4": {
-          "id": 4,
-          "color": "#E24D42",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "*"
         }
       },
       "ids": [
         0,
         1,
         2,
-        3,
-        4
+        3
       ]
     },
     "filter": {
@@ -62,7 +52,7 @@
         "0": {
           "type": "time",
           "field": "@timestamp",
-          "from": "now-12h",
+          "from": "now-6h",
           "to": "now",
           "mandate": "must",
           "active": true,
@@ -327,7 +317,7 @@
         },
         {
           "error": false,
-          "span": 3,
+          "span": 1,
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
@@ -345,7 +335,7 @@
           "labels": true,
           "arrangement": "horizontal",
           "chart": "pie",
-          "counter_pos": "above",
+          "counter_pos": "none",
           "spyable": true,
           "queries": {
             "mode": "all",
@@ -360,6 +350,78 @@
           "tstat": "total",
           "valuefield": "",
           "title": "HTTP Response"
+        },
+        {
+          "error": false,
+          "span": 1,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "field": "http_method",
+          "exclude": [],
+          "missing": true,
+          "other": true,
+          "size": 10,
+          "order": "count",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "none",
+          "spyable": true,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "tmode": "terms",
+          "tstat": "total",
+          "valuefield": "",
+          "title": "HTTP Method"
+        },
+        {
+          "error": false,
+          "span": 1,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "field": "host",
+          "exclude": [],
+          "missing": true,
+          "other": true,
+          "size": 10,
+          "order": "count",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "none",
+          "spyable": true,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "tmode": "terms",
+          "tstat": "total",
+          "valuefield": "",
+          "title": "Host"
         }
       ],
       "notice": false
@@ -554,7 +616,7 @@
     {
       "type": "filtering",
       "collapse": true,
-      "notice": true,
+      "notice": false,
       "enable": true
     }
   ],
