@@ -479,11 +479,11 @@
         "type:nginx-access",
         "mozilla",
         "\"Mozilla/5.0\"",
-        "response:[400 TO 499]",
-        "response:[500 TO 599]",
-        "response:[300 TO 399]",
-        "response:[200 TO 299]",
-        "respose:[200 TO 299]"
+        "http_status:[400 TO 499]",
+        "http_status:[500 TO 599]",
+        "http_status:[300 TO 399]",
+        "http_status:[200 TO 299]",
+        "http_status:[200 TO 299]"
       ],
       "remember": 10,
       "enable": true
