@@ -418,7 +418,7 @@
           "tmode": "terms",
           "tstat": "total",
           "valuefield": "",
-          "title": "Top 10 OS"
+          "title": "Top 10 Useragents"
         },
         {
           "error": false,
