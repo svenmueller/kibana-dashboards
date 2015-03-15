@@ -52,7 +52,7 @@
         "0": {
           "type": "time",
           "field": "@timestamp",
-          "from": "now-6h",
+          "from": "now-24h",
           "to": "now",
           "mandate": "must",
           "active": true,
@@ -95,7 +95,7 @@
           "value_field": null,
           "auto_int": true,
           "resolution": 100,
-          "interval": "5m",
+          "interval": "10m",
           "fill": 3,
           "linewidth": 3,
           "timezone": "browser",
@@ -199,7 +199,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "5m",
+          "interval": "10m",
           "intervals": [
             "auto",
             "1s",
@@ -227,7 +227,7 @@
           "legend": true,
           "show_query": true,
           "interactive": true,
-          "legend_counts": true,
+          "legend_counts": false,
           "timezone": "browser",
           "percentage": false,
           "zerofill": true,
@@ -276,7 +276,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "5m",
+          "interval": "10m",
           "intervals": [
             "auto",
             "1s",
@@ -304,7 +304,7 @@
           "legend": true,
           "show_query": true,
           "interactive": true,
-          "legend_counts": true,
+          "legend_counts": false,
           "timezone": "browser",
           "percentage": false,
           "zerofill": true,
@@ -616,7 +616,7 @@
     {
       "type": "filtering",
       "collapse": true,
-      "notice": false,
+      "notice": true,
       "enable": true
     }
   ],
